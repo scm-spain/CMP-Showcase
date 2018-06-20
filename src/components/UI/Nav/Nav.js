@@ -1,32 +1,40 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 import styled from 'styled-components'
 
-const Navigation = styled.ul`
-  padding-top: 2rem;
-  padding-left: 2rem;
-  background-color: #00518F;
-  color: #FFFFFF;
+const Navigation = styled.div`
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+  padding-left: 2rem;
+  padding-top: 2rem;
   width: 18.75rem;
-  
-  li {
-    list-style-type: none;
+  background-color: #00518F;
+
+  a {
+    color: #FFFFFF;
+    text-decoration: none;
   }
 
-  li:not(:last-child) {
+  a:not(:last-child) {
     margin-bottom: 1rem;
+  }
+
+  .active {
+    color: #5ca7e0;
   }
 `
 
 const nav = () => (
   <div>
     <Navigation>
-      <li>getVendorConsents</li>
-      <li>getConsentData</li>
-      <li>ping</li>
-      <li>getPublisherConsents</li>
-      <li>getVendorList</li>
+      <NavLink to="/" exact>Home</NavLink>
+      <NavLink to="/getVendorConsents">getVendorConsents</NavLink>
+      <NavLink to="/getConsentData">getConsentData</NavLink>
+      <NavLink to="/ping">ping</NavLink>
+      <NavLink to="/getPublisherConsents">getPublisherConsents</NavLink>
+      <NavLink to="/getVendorList">getVendorList</NavLink>
     </Navigation>
   </div>
 )

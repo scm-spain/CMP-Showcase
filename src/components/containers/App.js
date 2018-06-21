@@ -18,6 +18,7 @@ const Wrapper = styled.div`
 
 const Showcase = styled.div`
   margin: 2rem;
+  width: 100%;
 `
 
 class App extends Component {

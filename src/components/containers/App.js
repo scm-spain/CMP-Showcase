@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 `
 
 const Showcase = styled.div`
-  margin: 2rem;
+  margin: 2em 2em 2rem 20.75em;
   width: 100%;
 `
 

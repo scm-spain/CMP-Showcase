@@ -16,7 +16,7 @@ const Btn = styled.a`
 `
 
 const button = (props) => (
-  <Btn>{props.label}</Btn>
+  <Btn onClick={props.clicked} >{props.label}</Btn>
 )
 
 export default button

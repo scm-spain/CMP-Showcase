@@ -7,6 +7,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <title>Schibsted CMP showcase</title>
+    <script src="//localhost:5000/cmp.complete.bundle.js" async></script>
+    <script>
+		(function(window) {
+			window.__cmp = (function() {
+				var listen = window.attachEvent || window.addEventListener;
+				listen('message', function(event) {
+					window.__cmp.receiveMessage(event);
+				});
+
+				var commandQueue = [];
+				var cmp = function(command, parameter, callback) {
+					commandQueue.push({
+						command: command,
+						parameter: parameter,
+						callback: callback
+					});
+				};
+				cmp.commandQueue = commandQueue;
+				cmp.receiveMessage = function(event) {
+					var data = event && event.data && event.data.__cmpCall;
+					if (data) {
+						commandQueue.push({
+							callId: data.callId,
+							command: data.command,
+							parameter: data.parameter,
+							event: event
+						});
+					}
+				};
+				cmp.config = {
+					customPurposeListLocation: 'docs/purposes.json',
+					globalConsentLocation: 'docs/portal.html'
+				};
+				return cmp;
+			}());
+		})(window);
+
+		__cmp('showConsentTool');
+	</script>
 </head>
 
 <body>

@@ -7,7 +7,7 @@
     "cleanDistFolder": "rm -Rf ./dist",
     "build": "npm run cleanDistFolder && webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --open --hot"
+    "start": "webpack-dev-server --mode development --open --hot --config ./src/CMP_Demo/infrastructure/configuration/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/scm-spain/CMP-Showcase#readme",
   "devDependencies": {
+    "@s-ui/lint": "^2.16.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",

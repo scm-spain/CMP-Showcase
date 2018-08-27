@@ -1,0 +1,16 @@
+.methodPages {
+  &-subtitle {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+
+  &-buttonWrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    button:first-child {
+      margin-right: 1.5rem;
+    }
+  }
+}

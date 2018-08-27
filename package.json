@@ -49,6 +49,7 @@
     "@s-ui/react-cmp-banner": "^1.1.0",
     "@s-ui/react-cmp-services": "^1.1.0",
     "@s-ui/react-services-markdown": "^1.6.0",
+    "@schibstedspain/sui-atom-button": "^1.13.0",
     "@schibstedspain/sui-theme": "^8.37.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

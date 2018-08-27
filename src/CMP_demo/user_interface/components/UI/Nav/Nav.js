@@ -1,25 +1,27 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
-import { Navigation, Subtitle } from './Nav-styles'
+const baseClass = 'navigation'
 
 const nav = () => (
   <div>
-    <Navigation>
-      <NavLink to="/" exact>Schibsted CMP showcase</NavLink>
-      <Subtitle>Documentation</Subtitle>
+    <div className={`${baseClass}`}>
+      <NavLink to="/" exact>
+        Schibsted CMP showcase
+      </NavLink>
+      <div className={`${baseClass}-subtitle`}>Documentation</div>
       <NavLink to="#">Lorem Ipsum</NavLink>
       <NavLink to="#">Lorem Ipsum</NavLink>
-      <NavLink to="#">Lorem Ipsum</NavLink>
-      <Subtitle>Method examples</Subtitle>
+      <NavLink to="/configuration">Configuration</NavLink>
+      <div className={`${baseClass}-subtitle`}>Method examples</div>
       <NavLink to="/getVendorConsents">getVendorConsents</NavLink>
       <NavLink to="/getConsentData">getConsentData</NavLink>
       <NavLink to="/ping">ping</NavLink>
       <NavLink to="/getPublisherConsents">getPublisherConsents</NavLink>
       <NavLink to="/getVendorList">getVendorList</NavLink>
-      <Subtitle>Demo</Subtitle>
+      <div className={`${baseClass}-subtitle`}>Demo</div>
       <NavLink to="#">Lorem Ipsum</NavLink>
-    </Navigation>
+    </div>
   </div>
 )
 

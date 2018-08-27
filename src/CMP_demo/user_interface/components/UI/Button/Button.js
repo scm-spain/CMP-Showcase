@@ -1,9 +1,17 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-import { Btn } from './Button-styles'
+const baseClass = 'btn'
 
-const button = (props) => (
-  <Btn onClick={props.clicked} >{props.label}</Btn>
+const button = props => (
+  <button className={`${baseClass}`} onClick={props.clicked}>
+    {props.label}
+  </button>
 )
+
+button.propTypes = {
+  clicked: PropTypes.func,
+  label: PropTypes.string
+}
 
 export default button

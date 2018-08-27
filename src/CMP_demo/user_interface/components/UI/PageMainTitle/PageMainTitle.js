@@ -1,11 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-import { Title } from './PageMainTitle-styles'
+const baseClass = 'title'
 
-const pageTitle = (props) => (
+const pageTitle = props => (
   <div>
-    <Title>{props.title}</Title>
+    <h2 className={`${baseClass}`}>{props.title}</h2>
   </div>
 )
+
+pageTitle.propTypes = {
+  title: PropTypes.string
+}
 
 export default pageTitle

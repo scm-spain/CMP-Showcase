@@ -1,13 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-import { CodeBox } from './Output-styles'
+const baseClass = 'codeBox'
 
-const code = (props) => (
-  <CodeBox>
-    <code>
-{`${props.output}`}
-    </code>
-  </CodeBox>
+const code = props => (
+  <pre className={`${baseClass}`}>
+    <code>{`${props.output}`}</code>
+  </pre>
 )
+
+code.propTypes = {
+  output: PropTypes.string
+}
 
 export default code

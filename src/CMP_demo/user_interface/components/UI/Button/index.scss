@@ -1,6 +1,4 @@
-import styled from 'styled-components'
-
-export const Btn = styled.a`
+.btn {
   background-color: #00518f;
   color: #FFF;
   padding: .6rem 1.2rem;
@@ -11,4 +9,4 @@ export const Btn = styled.a`
   &:hover {
     background-color: #4b7391;
   }
-`
+}

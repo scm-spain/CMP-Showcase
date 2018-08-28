@@ -14,7 +14,10 @@ class GetPublisherConsents extends Component {
   handleGetPublisherConsents = () => {
     window.__cmp('getPublisherConsents', null, (data, success) => {
       this.setState({
-        getPublisherConsentsResponse: JSON.stringify(data, null, 2)
+        getPublisherConsentsResponse: {
+          success: JSON.stringify(success, null, 2),
+          data: JSON.stringify(data, null, 2)
+        }
       })
     })
   }

@@ -14,7 +14,10 @@ class GetVendorConsents extends Component {
   handleGetVendorConsents = () => {
     window.__cmp('getVendorConsents', null, (data, success) => {
       this.setState({
-        getVendorConsentsResponse: JSON.stringify(data, null, 2)
+        getVendorConsentsResponse: {
+          success: JSON.stringify(success, null, 2),
+          data: JSON.stringify(data, null, 2)
+        }
       })
     })
   }

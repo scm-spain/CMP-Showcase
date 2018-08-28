@@ -13,7 +13,12 @@ class GetConsentData extends Component {
 
   handleGetConsentData = () => {
     window.__cmp('getConsentData', null, (data, success) => {
-      this.setState({getConsentDataResponse: JSON.stringify(data, null, 2)})
+      this.setState({
+        getConsentDataResponse: {
+          success: JSON.stringify(success, null, 2),
+          data: JSON.stringify(data, null, 2)
+        }
+      })
     })
   }
 

@@ -13,7 +13,12 @@ class GetVendorList extends Component {
 
   handleGetVendorList = () => {
     window.__cmp('getVendorList', null, (data, success) => {
-      this.setState({getVendorListResponse: JSON.stringify(data, null, 2)})
+      this.setState({
+        getVendorListResponse: {
+          success: JSON.stringify(success, null, 2),
+          data: JSON.stringify(data, null, 2)
+        }
+      })
     })
   }
 

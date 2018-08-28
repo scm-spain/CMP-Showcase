@@ -13,7 +13,12 @@ class Ping extends Component {
 
   handlePing = () => {
     window.__cmp('ping', null, (data, success) => {
-      this.setState({pingResponse: JSON.stringify(data, null, 2)})
+      this.setState({
+        pingResponse: {
+          success: JSON.stringify(success, null, 2),
+          data: JSON.stringify(data, null, 2)
+        }
+      })
     })
   }
 

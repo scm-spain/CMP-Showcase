@@ -12,8 +12,8 @@ class Ping extends Component {
   }
 
   handlePing = () => {
-    window.__cmp('ping', null, result => {
-      this.setState({pingResponse: JSON.stringify(result, null, 2)})
+    window.__cmp('ping', null, (data, success) => {
+      this.setState({pingResponse: JSON.stringify(data, null, 2)})
     })
   }
 
@@ -27,8 +27,8 @@ class Ping extends Component {
         <Title title="Ping" />
         <h3 className={`${baseClass}-subtitle`}>Code</h3>
         <Code
-          code={`window.__cmp('ping', null, function(result) {
-  console.log(JSON.stringify(result, null, 2));
+          code={`window.__cmp('ping', null, (data, success) => {
+  console.log(JSON.stringify(data, null, 2));
 });`}
         />
         <h3 className={`${baseClass}-subtitle`}>My Logger Output</h3>

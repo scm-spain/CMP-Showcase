@@ -12,8 +12,8 @@ class GetConsentData extends Component {
   }
 
   handleGetConsentData = () => {
-    window.__cmp('getConsentData', null, result => {
-      this.setState({getConsentDataResponse: JSON.stringify(result, null, 2)})
+    window.__cmp('getConsentData', null, (data, success) => {
+      this.setState({getConsentDataResponse: JSON.stringify(data, null, 2)})
     })
   }
 
@@ -27,8 +27,8 @@ class GetConsentData extends Component {
         <Title title="Get Consent Data" />
         <h3 className={`${baseClass}-subtitle`}>Code</h3>
         <Code
-          code={`window.__cmp('getConsentData', null, function(result) {
-  console.log(JSON.stringify(result, null, 2));
+          code={`window.__cmp('getConsentData', null, (data, success) => {
+  console.log(JSON.stringify(data, null, 2));
 });`}
         />
         <h3 className={`${baseClass}-subtitle`}>My Logger Output</h3>

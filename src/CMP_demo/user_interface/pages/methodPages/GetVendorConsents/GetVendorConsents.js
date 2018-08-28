@@ -12,9 +12,9 @@ class GetVendorConsents extends Component {
   }
 
   handleGetVendorConsents = () => {
-    window.__cmp('getVendorConsents', null, result => {
+    window.__cmp('getVendorConsents', null, (data, success) => {
       this.setState({
-        getVendorConsentsResponse: JSON.stringify(result, null, 2)
+        getVendorConsentsResponse: JSON.stringify(data, null, 2)
       })
     })
   }
@@ -29,8 +29,8 @@ class GetVendorConsents extends Component {
         <Title title="Get Vendor Consents" />
         <h3 className={`${baseClass}-subtitle`}>Code</h3>
         <Code
-          code={`window.__cmp('getVendorConsents', null, function(result) {
-  console.log(JSON.stringify(result, null, 2));
+          code={`window.__cmp('getVendorConsents', null, (data, success) => {
+  console.log(JSON.stringify(data, null, 2));
 });`}
         />
         <h3 className={`${baseClass}-subtitle`}>My Logger Output</h3>

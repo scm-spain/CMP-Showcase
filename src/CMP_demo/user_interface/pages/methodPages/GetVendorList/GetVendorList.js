@@ -12,8 +12,8 @@ class GetVendorList extends Component {
   }
 
   handleGetVendorList = () => {
-    window.__cmp('getVendorList', null, result => {
-      this.setState({getVendorListResponse: JSON.stringify(result, null, 2)})
+    window.__cmp('getVendorList', null, (data, success) => {
+      this.setState({getVendorListResponse: JSON.stringify(data, null, 2)})
     })
   }
 
@@ -27,8 +27,8 @@ class GetVendorList extends Component {
         <Title title="GetVendorList" />
         <h3 className={`${baseClass}-subtitle`}>Code</h3>
         <Code
-          code={`window.__cmp('getVendorList', null, function(result) {
-  console.log(JSON.stringify(result, null, 2));
+          code={`window.__cmp('getVendorList', null, (data, success) => {
+  console.log(JSON.stringify(data, null, 2));
 });`}
         />
         <h3 className={`${baseClass}-subtitle`}>My Logger Output</h3>

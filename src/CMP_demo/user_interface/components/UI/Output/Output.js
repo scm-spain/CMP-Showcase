@@ -6,7 +6,7 @@ const baseClass = 'codeBox'
 const code = props => {
   let output = ''
   if (props.output)
-    output = `Success: ${props.output.success}\nData:\n${props.output.data}`
+    output = `success: ${props.output.success}\ndata:\n${props.output.data}`
 
   return (
     <pre className={`${baseClass}`}>

@@ -33,6 +33,7 @@ class GetPublisherConsents extends Component {
         <h3 className={`${baseClass}-subtitle`}>Code</h3>
         <Code
           code={`window.__cmp('getPublisherConsents', null, (data, success) => {
+  console.log(JSON.stringify(success, null, 2));
   console.log(JSON.stringify(data, null, 2));
 });`}
         />

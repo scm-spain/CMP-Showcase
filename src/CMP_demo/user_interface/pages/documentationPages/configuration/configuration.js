@@ -4,7 +4,9 @@ import ServiceMarkdown from '@s-ui/react-services-markdown'
 class configuration extends Component {
   render() {
     return (
-      <ServiceMarkdown src="src/CMP_demo/user_interface/pages/documentationPages/configuration/configuration.md" />
+      <article className="markdown-body">
+        <ServiceMarkdown src="src/CMP_demo/user_interface/pages/documentationPages/configuration/configuration.md" />
+      </article>
     )
   }
 }

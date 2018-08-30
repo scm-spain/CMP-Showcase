@@ -7,7 +7,7 @@ const nav = () => (
   <div>
     <div className={`${baseClass}`}>
       <NavLink to="/" exact>
-        BorosJS
+        Boros
       </NavLink>
       <div className={`${baseClass}-subtitle`}>Documentation</div>
       <NavLink to="#">Lorem Ipsum</NavLink>

@@ -4,8 +4,10 @@
   "description": "Showcase for de Schibsted Spain CMP",
   "main": "index.js",
   "scripts": {
-    "build:dev": "webpack --config src/CMP_Demo/infrastructure/configuration/webpack.config.cmp.babel.js --mode development",
-    "start": "webpack-dev-server --config src/CMP_Demo/infrastructure/configuration/webpack.config.cmp.babel.js --mode development --open --hot",
+    "cleanDistFolder": "rm -Rf ./dist",
+    "build": "npm run cleanDistFolder && webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open --hot --config ./src/CMP_Demo/infrastructure/configuration/webpack.config.js",
     "lint": "sui-lint js"
   },
   "repository": {
@@ -33,7 +35,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-preset-sui": "^1.7.0",
-    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.9.3",

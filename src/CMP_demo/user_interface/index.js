@@ -6,6 +6,9 @@ import './index.scss'
 import boroscmp from '@schibstedspain/boros-cmp'
 
 boroscmp.init()
+  .then(()=>{
+    console.log('Boros has been initialized!')
+  })
 
 ReactDOM.render(
   <BrowserRouter>

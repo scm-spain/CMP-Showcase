@@ -1,6 +1,6 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import path from 'path'
-import CleanWebpackPlugin from 'clean-webpack-plugin'
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const OUTPUT_DIST_FOLDER = 'dist'
 const ENTRY_PATH = './src/CMP_Demo/user_interface/index.js'

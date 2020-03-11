@@ -1,7 +1,7 @@
 {
-  "name": "@schibstedspain/cmp-showcase",
+  "name": "boros-cmp-showcase",
   "version": "1.1.0",
-  "description": "Showcase for de Schibsted Spain CMP",
+  "description": "Showcase for Boros CMP",
   "main": "index.js",
   "scripts": {
     "phoenix": "rm -Rf node_modules && rm -Rf package-lock.json && npm install",
